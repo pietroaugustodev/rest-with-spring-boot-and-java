@@ -1,4 +1,4 @@
-package mapper;
+package br.com.pietro.mapper;
 
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;

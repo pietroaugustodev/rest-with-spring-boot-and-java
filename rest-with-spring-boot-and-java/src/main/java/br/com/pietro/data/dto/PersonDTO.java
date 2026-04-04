@@ -1,5 +1,4 @@
-package data.dto;
-
+package br.com.pietro.data.dto;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
