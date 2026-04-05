@@ -1,8 +1,8 @@
-package br.com.pietro.controllers;
+package br.com.pietro.controllers.v1;
 
 import br.com.pietro.services.PersonService;
 import org.springframework.http.MediaType;
-import br.com.pietro.data.dto.PersonDTO;
+import br.com.pietro.data.dto.v1.PersonDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;

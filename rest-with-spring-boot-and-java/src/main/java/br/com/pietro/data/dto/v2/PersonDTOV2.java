@@ -1,10 +1,9 @@
-package br.com.pietro.data.dto;
-import jakarta.persistence.*;
+package br.com.pietro.data.dto.v2;
 
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.Date;
 
-public class PersonDTO implements Serializable {
+public class PersonDTOV2 implements Serializable {
 
     private static final long serialVersionUID = 1l;
     private Long id;
@@ -12,8 +11,9 @@ public class PersonDTO implements Serializable {
     private String lastName;
     private String adress;
     private String gender;
+    private Date birthDay;
 
-    public PersonDTO() {};
+    public PersonDTOV2() {};
 
     // getters
     public Long getId(){
@@ -31,6 +31,7 @@ public class PersonDTO implements Serializable {
     public String getGender(){
         return this.gender;
     }
+    public Date getBirthDay() { return birthDay; }
 
     // setters
     public void setId(Long id){
@@ -48,15 +49,8 @@ public class PersonDTO implements Serializable {
     public void setGender(String gender){
         this.gender = gender;
     }
+    public void setBirthDay(Date birthDay) {this.birthDay = birthDay;}
 
-    @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof PersonDTO person)) return false;
-        return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getAdress(), person.getAdress()) && Objects.equals(getGender(), person.getGender());
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName(), getAdress(), getGender());
-    }
+
 }
